@@ -1,0 +1,2 @@
+# 本工具包仅依赖 Python 标准库（math、statistics），无需安装任何第三方包。
+# 要求 Python >= 3.8
