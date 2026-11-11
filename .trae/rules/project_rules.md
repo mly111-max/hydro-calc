@@ -25,19 +25,19 @@
 - 干渠由下游向上游逐段推算；支渠损失按各支渠实际长度分别计算；
   典型支渠用于求斗渠、农渠与田间各级效率
 
-## 计算工具（绝对路径，任意新会话可直接导入）
+## 计算工具（仓库内相对路径，克隆到任意位置均可使用）
 
 | 课程 | 函数库 | 示例 |
 |---|---|---|
-| 农田水利学 | /workspace/water_calc/canal.py | /workspace/water_calc/demo.py |
-| 土力学 | /workspace/soil_mechanics/soil.py | /workspace/soil_mechanics/demo.py |
-| 工程水文学 | /workspace/hydrology/hydro.py | /workspace/hydrology/demo.py |
+| 农田水利学 | water_calc/canal.py | water_calc/demo.py |
+| 土力学 | soil_mechanics/soil.py | soil_mechanics/demo.py |
+| 工程水文学 | hydrology/hydro.py | hydrology/demo.py |
 
-导入方式：
+导入方式（以下路径相对于仓库根目录）：
 
 ```python
 import sys
-sys.path.insert(0, "/workspace/water_calc")   # 或 soil_mechanics / hydrology
+sys.path.insert(0, "water_calc")   # 或 soil_mechanics / hydrology
 from canal import main_canal_segments
 ```
 
@@ -59,7 +59,6 @@ from canal import main_canal_segments
 - P-III 的 p 为**超过频率**（设计频率），内部按累积概率 1-p 计算。
 
 ## 跨会话使用（重要）
-- 本项目内：本规则文件 + `/workspace` 下三个工具包，新会话自动可用。
-- 所有项目/所有会话：需把版次与工具路径加入 Trae 的**用户规则（User Rules）**，
-  并保证 `/workspace`（或迁移后的路径）长期存在。
-- 若迁移工作区，请同步修改本规则中的绝对路径。
+- 本项目内：本规则文件 + 仓库内三个工具目录，新会话自动可用。
+- 所有项目/所有会话：需把版次与工具目录（仓库克隆后的实际路径）加入 Trae 的**用户规则（User Rules）**。
+- 本文件中的路径均相对于仓库根目录；换机器只需重新克隆，无需改路径。
