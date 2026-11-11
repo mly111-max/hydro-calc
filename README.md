@@ -72,6 +72,10 @@ segs = main_canal_segments(lengths=[3.0, 2.0, 1.0], branch_gross=[0.9, 1.31, 1.1
 | 太沙基承载力、附加应力 | `terzaghi_bearing_capacity` `boussinesq_point_stress` `vertical_stress_rectangular` |
 | 边坡稳定（无限边坡、瑞典条分、毕肖普） | `infinite_slope_fs` `taylor_stability_number` `swedish_slice_fs` `bishop_slice_fs` |
 
+## Excel 模板
+
+`templates/农田水利计算表.xlsx`：5 张表（参数、渠道输水损失、干渠分段推流、渠系水利用系数、梯形断面），黄色格填数、灰色格自动算，可直接用于课程作业与论文附录。数值已与 `water_calc` 中的例题结果核对一致。
+
 ## 单位约定
 
 | 课程 | 单位 |
